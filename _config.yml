@@ -14,7 +14,7 @@ description:         A math blog with low standards for what counts as interesti
 #baseurl: ""
 #urlimg: https://trivial-proofs.github.io/images/
 ## If you do not have custom domain, comment top three lines, uncomment three lines below and replace dyndna with your github userid and lanyon-plus with your project name. Also, rename CNAME file to CNAME.sample
-#url: https://trivial-proofs.github.io/lanyon-plus
+#url: https://trivial-proofs.github.io
 #baseurl: "/lanyon-plus"
 #urlimg: https://trivial-proofs.github.io/lanyon-plus/images/
 markdown: kramdown
