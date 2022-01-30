@@ -11,12 +11,12 @@ mathjax: true
 # Counting Hyperplane Chambers
 
 The lazy caterer's sequence counts the maximum number of pieces that you
-can cut a pancake into with <math>n</math> straight cuts. More mathematically, this
-is the maximum number of chambers of an arrangement of \(n\) lines in the
-plane. Conveniently, there's a great formula for it: setting \(C(n)\) as
-\(n^{th}\) term of the lazy caterer's sequence, we have
+can cut a pancake into with $n$ straight cuts. More mathematically, this
+is the maximum number of chambers of an arrangement of $n$ lines in the
+plane. Conveniently, there's a great formula for it: setting $C(n)$ as
+$n^{th}$ term of the lazy caterer's sequence, we have
 
-\[C(n) = \frac{n^2 + n +2}{2} = \binom n 0 + \binom n 1 + \binom n 2\]
+$C(n) = \frac{n^2 + n +2}{2} = \binom n 0 + \binom n 1 + \binom n 2$
 
 How do we generalize this to an arbitrary dimension $d$? Let's set
 $C(n, d)$ as the maximum number of chambers of an arrangemt of $n$
