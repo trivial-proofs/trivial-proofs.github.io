@@ -1,7 +1,13 @@
+
+
 ---
-author:
-- Caitlin Lienkaemper
-title: When is a single layer ReLU network injective?
+layout: post
+title: Taking the lazy caterer's sequence into another dimension 
+# date element overrides date in title format.
+date: 2022-1-29
+tag:
+  - common_tag
+  - other_tag
 ---
 
 # Counting Hyperplane Chambers
@@ -78,95 +84,6 @@ C(n, d) &=\binom n 0 + \binom n 1 + \cdots  +\binom n d = \sum_{i = 0}^{d} \bino
 as desired. ◻
 :::
 
-#  Single layer ReLU networks
-
-Now, we consider the map from $\mathbb R^d$ to $\mathbb R^n$ ($n > d$)
-given by a single layer of rectified linear (ReLU) units. Let
-$\sigma : \mathbb R\to \mathbb R$ denote the threshold nonlinearity
-$\sigma(x) = \max\{x, 0\}$. Then the function computed by a single layer
-ReLU network is given by
-$$f(\mathbf x) = \sigma(W \mathbf x + \mathbf b),$$ where $W$ is a
-$n \times d$ matrix computing a linear map from $\mathbb R^d$ to
-$\mathbb R^n$, $\mathbf b \in \mathbb R^n$, and $\sigma$ is applied
-entry-wise. If $W$ and $\mathrm b$ are chosen at random, what is the
-probability that $f$ is injective? We'll show that if $n >> d$, $f$ is
-injective with high probability.
-
-Note that if we forgot about $\sigma$, this would be a linear algebra
-question: the function $g(\mathbf x) = W \mathbf x  + \mathbf b$ is
-injective as long as $W$ has rank $d$. This is guaranteed if there is at
-least one $d\times d$ submatrix of $W$ which has full rank. This happens
-with probability 1 if the entries of $W$ are chosen at random according
-to any reasonable distribution. From now on, let's assume that $W$ is
-generic in the sense that each $d \times d$ submatrix of $W$ has rank
-$d$. Now, we'll apply this to the case where we *do* have the ReLU here
-to mess things up.
-
-By definition, $f$ is injective if $f(\mathbf x) = f(\mathbf y)$ implies
-$\mathbf x = \mathbf y$. So, let's find some conditions for $f$ *not* to
-be injective. Suppose $f(\mathbf x ) = f(\mathbf y)$, but
-$\mathbf x \neq \mathbf y$. Let the *support* of $f$ at $\mathbf x$ be
-given by $s(\mathbf x ) \subseteq [n]$ give the set of indices $i$ such
-that $f( \mathbf x)_i > 0$. By restricting $f$ to the coordinates
-indexed by $s(\mathbf x)$, we get a map from
-$\mathbb R^d \to \mathbb R^{|s(\mathbf x)|}$ which is linear at both
-$\mathbf x$ and $\mathbf y$, since both $\mathbf x$ and $\mathbf y$ must
-be on the positive side of all the ReLU's here. Thus if
-$|s(\mathbf x)| \geq d$, this restricted map is injective. **Thus, the
-only way $f$ can fail to be injective is if there is some $\mathbf x$
-such that $|s(\mathbf x)| < d$.**
-
-Thus, if $f$ is not injective, there must be some point
-$\mathbf x \in \mathbb R^d$ such that $|s(\mathbf x)| < d$. Let's look
-for conditions on $W, \mathbf b$ that guarantee this. To do this, we
-associate an affine arrangement of $n$ hyperplanes in $\mathbb R^d$ to
-$W$. The hyperplanes are given by
-$H_i = \{ \mathbf x \mid \mathbf w_{i} \cdot \mathbf x + b_i = 0\}$,
-where $\mathbf w_{i}$ denotes the $i^{th}$ row of $W$. Note that on the
-positive side of $H_i$, $f(\mathbf x)_i =(W \mathbf x + b)_i > 0$, and
-on the negative side of $H_i$, $f(\mathbf x)_i = 0$. Thus,
-$i\in s(\mathbf x)$ if and only if $\mathbf x \in H_i ^+$. The
-hyperplane arrangement $H_1,  \ldots, H_n$ divides up $\mathbb R^d$ into
-a set of chambers. Each chamber corresponds to a different value of
-$s(\mathbf x)$.
-
-Thus, here's another way to think about our injectivity question: if we
-pick an affine hyperplane arrangement of $n$ hyperplanes in
-$\mathbb R^d$ at random, what is the probability that each chamber is on
-the positive side of at least $d$ of our hyperplanes? What's interesting
-here is that it doesn't really matter how we pick our random
-hyperplanes, as long as we do it in a way that is generic and such that
-both orientations of a hyperplane are equally likely. Let $P(n, d)$ give
-the probability that the bad thing happens, i.e. there is at least one
-chamber of the hyperplane arrangement that is *not* on the positive side
-of at least $d$ of the hyperplanes. Fix a point $\mathbf x$ in space.
-Since both orientations of each hyperplane are equally likely, for each
-hyperplane $H_i$, it is equally likely that $\mathbf x$ is on the
-positive side of $\mathbf x$ as it is on the negative side of $H_i$.
-Thus, the probability that $\mathbf x$ is on the positive side of fewer
-than $d$ hyperplanes is given by the binomial distribution with
-$p = 1/2$, so it is $\frac{\sum_{i = 1}^{d-1}\binom n i}{2 ^n}$.
-
-Now, we turn and consider the possibility that *any* point $\mathbf x$
-is on the positive side of too few hyperplanes. Our generic arrangement
-of $n$ hyperplanes in $\mathbb R^d$ has $\sum_{i = 0}^d \binom n i$
-chambers with fixed sign pattern. Let $E_C$ be the event that chamber
-$C$ is on the positive side of fewer than $d$ hyperplanes. By our
-previous argument, for any fixed chamber $C$, the probability of $E_C$
-is given by $P(E_C)\frac{\sum_{i = 1}^d \binom n i}{2 ^n}$. The event
-that some chamber is on the positive side of too few hyperplanes is the
-union of $E_C$ over all chambers $C$. In the worst case, all of these
-events are disjoint, so the probability of the event $E$ that some
-chamber is on the positive side of too few hyperplanes is bounded above
-by
-$$P(E) = \left(\sum_{i = 0}^d \binom n i\right) \left(\sum_{i = 0}^d \binom n i\right) 2^{-n}.$$
-For fixed $d$, we show that $P(E) \to 0$ as $n \to \infty$. We use the
-approximations $$\binom n i \leq \left( \frac{en}{i} \right)^{-i}$$and
-$$\sum_{i = 0}^d \binom n i \leq 2^{d} \binom n d  \leq  2^d\left( \frac{en}{d} \right)^{d} =\left( \frac{2 en}{d}\right)^d$$
-to obtain the result that
-$$P(E) \leq \left( \frac{2 en}{d}\right)^d 2^{-n}.$$ Note that for fixed
-$d$, $\left( \frac{2 en}{d}\right)^d$ is polynomial in $n$, while
-$2^{-n}$ is exponential in $n$, thus as $n\to \infty$, $P(E) \to 0$.
 
 [^1]: Math people: I mean an affine hyperplane arrangement. Meaning that
     we do not force all the planes to go through the origin.
