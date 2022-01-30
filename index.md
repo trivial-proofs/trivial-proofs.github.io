@@ -4,11 +4,6 @@ permalink: index.html
 title: Trivial proofs
 description:
 ---
-
-## Math is hard
-
-This is a mostly a math blog that acknowledges that. Built using the [Lanyon plus theme](https://github.com/dyndna/lanyon-plus), which seems like the least painful way to get MathJax mostly working on Github pagess. 
-
 <div class="posts">
   {% for post in site.categories.featured limit:2 %}
   <div class="post">
