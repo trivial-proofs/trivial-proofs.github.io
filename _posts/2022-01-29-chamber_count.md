@@ -3,11 +3,11 @@
 ---
 layout: post
 title: Taking the lazy caterer's sequence into another dimension 
-# date element overrides date in title format.
 date: 2022-1-29
 tag:
   - common_tag
   - other_tag
+mathjax: true 
 ---
 
 # Counting Hyperplane Chambers
