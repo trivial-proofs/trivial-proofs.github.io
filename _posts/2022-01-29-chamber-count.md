@@ -10,7 +10,7 @@ mathjax: true
 
 # Counting Hyperplane Chambers
 
-The lazy caterer's sequence counts the maximum number of pieces that you
+The [lazy caterer's sequence](https://en.wikipedia.org/wiki/Lazy_caterer%27s_sequence) counts the maximum number of pieces that you
 can cut a pancake into with \\(n\\) straight cuts. More mathematically, this
 is the maximum number of chambers of an arrangement of \\(n\\) lines in the
 plane. Conveniently, there's a great formula for it: setting \\(C(n)\\) as
@@ -18,17 +18,19 @@ plane. Conveniently, there's a great formula for it: setting \\(C(n)\\) as
 
 \\[C(n) = \frac{n^2 + n +2}{2} = \binom n 0 + \binom n 1 + \binom n 2\\]
 
-How do we generalize this to an arbitrary dimension \\(d\\)? Let's set
-\\(C(n, d)\\) as the maximum number of chambers of an arrangemt of \\(n\\)
+I'll skip this derivation, since it's available on [Wikipedia](https://en.wikipedia.org/wiki/Lazy_caterer%27s_sequence). How do we generalize this to an arbitrary dimension \\(d\\)?  Let's set \\(C(n, d)\\) as the maximum number of chambers of an arrangemt of \\(n\\)
 hyperplanes in \\(\mathbb R^d\\).[^1] I mean, there's an "obvious\"[^2]
 guess: let's just keep the sum going:
 
 \\[C(n, d)  = \binom n 0 + \binom n 1 + \binom n 2 + \cdots + \binom n d  = \sum_{i = 0}^{d} \binom n i\\]
+
+This works for at least \\( d = 3\\), as we can see by taking a look at the [Cake number](https://en.wikipedia.org/wiki/Cake_number). 
 Conveniently, this guess is right. As far as I can tell, this is a well
 known result, but it's the sort of well known result that is a little
-bit annoying to look up online. Supposedly, you can cite \[source\], but
-I have no idea where this result appears within \[source\], so I'm gonna
-prove the result here.
+bit annoying to look up online. I think the proper math thing to do is to prove this result via Zaslavsky's theorem. There's a brief account of how to do that [here](https://rangevoting.org/ZaslavskyTheorem.pdf). As far as I can tell, this appears first in [*Facing up to Arrangements* (Zaslavsky, 1975)]
+(https://bookstore.ams.org/memo-1-154/), which you can read for free if you can deal with the fact that it's written on a typewriter. But no fancy combinatorics is actually needed to get this result, so we're going to prove it today by generalizing the same recurrence relation used in the two and three dimensional cases. 
+
+
 
 Finally, I'm sick of saying "maximum\". It turns out that if you pick
 any \"generic\" hyperplane arrangement, in the sense that you never let
@@ -70,7 +72,7 @@ First, we check the base cases for \\(n\\) and \\(d\\). If \\(d = 1\\), then our
 "hyperplanes\" are points on a line, and \\(n\\\) points on a line split that
 line into \\(\binom n 0 + \binom n 1 = n+ 1\\) chambers, so
 \\(C(n, 1) = \sum_{i = 0}^{1}\binom n i\\). If \\(n \leq d\\), then generically
-all hyperplanes intersect, creating \\(2^n\\) regions, so
+all hyperplanes intersect at a point. When \\(n\\) hyperplanes meet at a point, locally, they look like the coordinite planes in \\(\mathbb R^n\\), so they create \\(2^n\\) regions. Thus,
 \\(C(n, d) = \sum_{i = 0}^{d} \binom n i\\). Now, suppose for all
 \\(m, k  < n, d\\), we have \\(C(m, k) = \sum_{i = 0}^{k}  \binom m i\\). Then
 by our recurrence relation, \\[
