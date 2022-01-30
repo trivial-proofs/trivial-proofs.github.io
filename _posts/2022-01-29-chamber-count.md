@@ -20,7 +20,7 @@ plane. Conveniently, there's a great formula for it: setting \\(C(n)\\) as
 
 How do we generalize this to an arbitrary dimension \\(d\\)? Let's set
 \\(C(n, d)\\) as the maximum number of chambers of an arrangemt of \\(n\\)
-hyperplanes in $\mathbb R^d$.[^1] I mean, there's an "obvious\"[^2]
+hyperplanes in \\(\mathbb R^d\\).[^1] I mean, there's an "obvious\"[^2]
 guess: let's just keep the sum going:
 
 \\[C(n, d)  = \binom n 0 + \binom n 1 + \binom n 2 + \cdots + \binom n d  = \sum_{i = 0}^{d} \binom n i\\]
