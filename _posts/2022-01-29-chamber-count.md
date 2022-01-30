@@ -1,5 +1,3 @@
-
-
 ---
 layout: post
 title: Taking the lazy caterer's sequence into another dimension 
