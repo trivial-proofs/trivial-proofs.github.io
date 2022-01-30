@@ -10,7 +10,9 @@ mathjax: true
 # Counting Hyperplane Chambers
 
 The [lazy caterer's sequence](https://en.wikipedia.org/wiki/Lazy_caterer%27s_sequence) counts the maximum number of pieces that you
-can cut a pancake into with \\(n\\) straight cuts. More mathematically, this
+can cut a pancake into with \\(n\\) straight cuts.
+![some "hyperplane" arrangements](https://trivial-proofs.github.io/images/arrangement_growing.jpg)
+More mathematically, this
 is the maximum number of chambers of an arrangement of \\(n\\) lines in the
 plane. Conveniently, there's a great formula for it: setting \\(C(n)\\) as
 \\(n^{th}\\) term of the lazy caterer's sequence, we have
