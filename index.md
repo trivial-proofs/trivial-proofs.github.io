@@ -5,7 +5,7 @@ title: Personal Homepage of foo boo
 description: "Blogging on ...."
 ---
 
-## [Math is hard]
+## Math is hard
 
 This is a mostly a math blog that acknowledges that. Built using the [Lanyon plus theme](https://github.com/dyndna/lanyon-plus), which seems like the least painful way to get MathJax mostly working on Github pagess. 
 
