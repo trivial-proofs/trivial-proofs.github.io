@@ -32,7 +32,7 @@ bit annoying to look up online. I think the proper math thing to do is to prove 
 
 Finally, I'm sick of saying "maximum\". It turns out that if you pick
 any \"generic\" hyperplane arrangement you will achieve the maximum
-number of chambers. By generic, I mean that if we're in \\(\mathbb \R^d\\), any set of \\(d\\) hyerplanes meet at single point, and any set of \\(m > d\\) hyperplanes do not meet at all. If you pick your hyperplane arrangement at random
+number of chambers. By generic, I mean that if we're in \\(\mathbb R^d\\), any set of \\(d\\) hyerplanes meet at single point, and any set of \\(m > d\\) hyperplanes do not meet at all. If you pick your hyperplane arrangement at random
 with any reasonable distribution, you will get a generic arrangement and
 maximize the number of chambers. Honestly this seems like a bit of a
 miracle, but it should fall out as a consequence of our proof.
