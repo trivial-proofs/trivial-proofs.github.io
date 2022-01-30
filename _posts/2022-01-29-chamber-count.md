@@ -26,8 +26,7 @@ guess: let's just keep the sum going:
 This works for at least \\( d = 3\\), as we can see by taking a look at the [Cake number](https://en.wikipedia.org/wiki/Cake_number). 
 Conveniently, this guess is right. As far as I can tell, this is a well
 known result, but it's the sort of well known result that is a little
-bit annoying to look up online. I think the proper math thing to do is to prove this result via Zaslavsky's theorem. There's a brief account of how to do that [here](https://rangevoting.org/ZaslavskyTheorem.pdf). As far as I can tell, this appears first in [Facing up to Arrangements]
-(https://bookstore.ams.org/memo-1-154/), which you can read for free if you can deal with the fact that that you are viewing typewritten pages though a janky pdf viewer in your browser. But no fancy combinatorics is actually needed to get this result, so we're going to prove it today by generalizing the same recurrence relation used in the two and three dimensional cases. 
+bit annoying to look up online. I think the proper math thing to do is to prove this result via Zaslavsky's theorem. There's a brief account of how to do that [here](https://rangevoting.org/ZaslavskyTheorem.pdf). As far as I can tell, this appears first in *[Facing up to Arrangements](https://bookstore.ams.org/memo-1-154/)*, which you can read for free if you can deal with the fact that that you are viewing typewritten pages though a janky pdf viewer in your browser. But no fancy combinatorics is actually needed to get this result, so we're going to prove it today by generalizing the same recurrence relation used in the two and three dimensional cases. 
 
 
 
