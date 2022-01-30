@@ -1,8 +1,8 @@
 ---
 layout: default
 permalink: index.html
-title: Personal Homepage of foo boo
-description: "Blogging on ...."
+title: Trivial proofs
+description:
 ---
 
 ## Math is hard
