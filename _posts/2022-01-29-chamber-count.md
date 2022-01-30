@@ -54,7 +54,7 @@ hyperplanes in \\(\mathbb R^d\\). Pick out one of the hyperplanes and tell
 it that it's special. If we remove out special hyperplane, there are
 only \\(n-1\\) hyperplanes left, so the number of chambers is \\(C(n-1, d)\\).
 
-![picking out a special hyperplane](https://trivial-proofs.github.io/blog/2022/01/29/images/special_hyperplane.jpg)
+![picking out a special hyperplane](https://trivial-proofs.github.io/images/special_hyperplane.jpg)
 
 Now, let's think about how many chambers are created when we add our
 special hyperplane back in. Each new chamber arises when one of the
